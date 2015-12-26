@@ -13,7 +13,7 @@ namespace JungleStack
 
         private static readonly Vector3[] StackRouteRadiant =
         {
-            new Vector3(-2732,-321,256),  // Wait for attack
+            new Vector3(-2732,-351,256),  // Wait for attack
             new Vector3(-4762,-2229,256), // Move for pulling
             new Vector3(-2428,-786,256) // Wait position
         };
@@ -159,10 +159,10 @@ namespace JungleStack
                         text.DrawText(null,
                             noCreep
                                 ? "StackScript: Нет крипов для стака."
-                                : "StackScript: Ожидание следующего стака.", x, y, Color.Red);
+                                : "StackScript: Жду следующего стака.", x, y, Color.Red);
                         break;
                     case 1:
-                        text.DrawText(null, "StackScript: Ожидание момента атаки.", x, y, Color.White);
+                        text.DrawText(null, "StackScript: Жду момента атаки.", x, y, Color.White);
                         break;
                     case 2:
                         text.DrawText(null, "StackScript: Стакаю.", x, y, Color.Green);
