@@ -146,26 +146,26 @@ namespace JungleStack
             if (pullCreep == null)
             {
                 var key = (char)Menu.Item("hotkey").GetValue<KeyBind>().Key;
-                text.DrawText(null, "StackScript: Select a ranged creep and press \""+key+"\".", x, y, Color.White);
+                text.DrawText(null, "StackScript: Выберите крипа мага и нажмите \""+key+"\".", x, y, Color.White);
             }
             else
             {
                 switch (orderState)
                 {
                     case -1:
-                        text.DrawText(null, "StackScript: moving to wait location", x, y, Color.White);
+                        text.DrawText(null, "StackScript: Двигаюсь в позицию ожидания", x, y, Color.White);
                         break;
                     case 0:
                         text.DrawText(null,
                             noCreep
-                                ? "StackScript: found no creep for pulling."
-                                : "StackScript: waiting for next pull.", x, y, Color.White);
+                                ? "StackScript: Нет крипов для стака."
+                                : "StackScript: Ожидание следующего стака.", x, y, Color.Red);
                         break;
                     case 1:
-                        text.DrawText(null, "StackScript: waiting for attack order.", x, y, Color.White);
+                        text.DrawText(null, "StackScript: Ожидание момента атаки.", x, y, Color.White);
                         break;
                     case 2:
-                        text.DrawText(null, "StackScript: pulling.", x, y, Color.White);
+                        text.DrawText(null, "StackScript: Стакаю.", x, y, Color.Green);
                         break;
                 }
             }
