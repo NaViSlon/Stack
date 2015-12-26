@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Ensage;
 using Ensage.Common.Menu;
@@ -13,7 +13,7 @@ namespace JungleStack
 
         private static readonly Vector3[] StackRouteRadiant =
         {
-            new Vector3(-2714,-155,256),  // Wait for attack
+            new Vector3(-2732,-301,256),  // Wait for attack
             new Vector3(-4762,-2229,256), // Move for pulling
             new Vector3(-2428,-786,256) // Wait position
         };
@@ -230,7 +230,7 @@ namespace JungleStack
                         }
                         pullCreep.Attack(attackme);
                         orderState = 2;
-                        Timer.Interval = 1650; // Wait until attack starts
+                        Timer.Interval = 1500; // Wait until attack starts
                         Timer.Start();
                     }
                     break;
